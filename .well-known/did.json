@@ -1,0 +1,48 @@
+{
+    "id": "did:web:ilyhel.github.io",
+    "@context": [
+      "https://www.w3.org/ns/did/v1",
+      {
+        "@base": "did:web:ilyhel.github.io"
+      }
+    ],
+    "service": [
+      {
+        "id": "#linkeddomains",
+        "type": "LinkedDomains",
+        "serviceEndpoint": {
+          "origins": [
+            "https://ilyhel.github.io/"
+          ]
+        }
+      },
+      {
+        "id": "#hub",
+        "type": "IdentityHub",
+        "serviceEndpoint": {
+          "instances": [
+            "https://hub.did.msidentity.com/v1.0/6a082d82-b8ab-4d55-8dcd-d753ddf2dfa0"
+          ]
+        }
+      }
+    ],
+    "verificationMethod": [
+      {
+        "id": "#ef2e4ffa5c65490e86012ef4d61dbc80vcSigningKey-7b057",
+        "controller": "did:web:ilyhel.github.io",
+        "type": "EcdsaSecp256k1VerificationKey2019",
+        "publicKeyJwk": {
+          "crv": "secp256k1",
+          "kty": "EC",
+          "x": "imhUg1MdaoxsWwZBAWbUSJjkmiHjBpGS1kN5UOv7Edc",
+          "y": "_SZ2okKCNjGYZKpR2dv8Pnu8mKIw79K_04VpBpRLyV4"
+        }
+      }
+    ],
+    "authentication": [
+      "#ef2e4ffa5c65490e86012ef4d61dbc80vcSigningKey-7b057"
+    ],
+    "assertionMethod": [
+      "#ef2e4ffa5c65490e86012ef4d61dbc80vcSigningKey-7b057"
+    ]
+  }
